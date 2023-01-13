@@ -12,39 +12,60 @@ struct ContentView: View {
         ScrollView{
             
             HStack {
+                
+                
+                
                 VStack{
+                    
+                    
                     
                     Image("LeafsLogo")
                         .resizable()
                         .scaledToFit()
+                        .frame(width:400)
                     
-                    ZStack{
+                    
+                    
+                    Text("RW")
+                        .foregroundColor(Color.white)
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(Color("leafscolor")))
                         
-                        Text("Right Wing")
-                            .foregroundColor(Color.white)
-                            .padding()
-                            .background(
-                                             RoundedRectangle(cornerRadius: 20)
-                                            .foregroundColor(Color.blue)
+                }
+                
+                Spacer()
+            }
+            HStack{
+                Spacer()
+                VStack{
+                    
+                    Spacer()
+                    Image("AustonMatthews")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300)
+                        .padding(.trailing, 10)
+                   
+                        }
+                        Spacer()
+                        
                     }
                     
                 }
-                .padding(0)
                 
-                Image("AustonMatthews")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 125)
-                    .padding(.trailing, 10)
             }
+            
+        }
+        
+    
+    
+    
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
         }
     }
-}
-    
 
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
